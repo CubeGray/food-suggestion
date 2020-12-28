@@ -1,5 +1,6 @@
 package model.dao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
@@ -13,7 +14,7 @@ import model.entity.RestaurantEntity;
 @Slf4j
 public class RestaurantDAO {
 	//레스토랑 추가
-	public static boolean addRestaurant(RestaurantEntity r) throws NotExistException{
+	public static boolean addRestaurant(RestaurantEntity r) throws Exception{
 		EntityManager em = PublicCommon.getEntityManger();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -43,7 +44,7 @@ public class RestaurantDAO {
 	
 	// 레스토랑수정
 	// rid로 maplink내용 수정하기
-	public static boolean updateRestaurant(String rid, String mlink) throws NotExistException {
+	public static boolean updateRestaurant(String rid, String mlink) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		EntityTransaction tx = em.getTransaction();
 		boolean flag=false;
@@ -71,7 +72,7 @@ public class RestaurantDAO {
 	}
 
 	// rid로 레스토랑 삭제
-	public static boolean deleteRestaurant(String rid) throws NotExistException {
+	public static boolean deleteRestaurant(String rid) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		EntityTransaction tx = em.getTransaction();
 		boolean flag = false;
@@ -97,7 +98,7 @@ public class RestaurantDAO {
 		return flag;
 	}
 	// sid로 해당 레스토랑 모든 정보 반환
-	public static ArrayList<RestaurantEntity> getRestaurant(String sid) throws NotExistException {
+	public static ArrayList<RestaurantEntity> getRestaurant(String sid) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		ArrayList<RestaurantEntity> list = null;
 		
@@ -119,7 +120,7 @@ public class RestaurantDAO {
 	}
 	
 	//전체 레스토랑 리스트 모든정보 반환
-	public static ArrayList<RestaurantEntity> getAllRestaurant() throws NotExistException {
+	public static ArrayList<RestaurantEntity> getAllRestaurant() throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		ArrayList<RestaurantEntity> list = null;
 		

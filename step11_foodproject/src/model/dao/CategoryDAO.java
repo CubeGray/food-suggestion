@@ -1,5 +1,7 @@
 package model.dao;
 
+import java.sql.SQLException;
+
 import javax.persistence.EntityManager;
 
 import food.exception.NotExistException;
@@ -10,7 +12,7 @@ import model.entity.CategoryEntity;
 @Slf4j
 public class CategoryDAO {
 	//cname으로 cid 찾아오기
-	public static String getCid(String cname) throws NotExistException {
+	public static String getCid(String cname) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		String cid = null;
 

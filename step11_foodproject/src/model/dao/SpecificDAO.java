@@ -1,5 +1,6 @@
 package model.dao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
@@ -12,7 +13,7 @@ import model.entity.SpecificEntity;
 @Slf4j
 public class SpecificDAO {
 	// cid로 해당 세부 카테고리 정보 반환
-	public static ArrayList<SpecificEntity> getSpecific(String cid) throws NotExistException {
+	public static ArrayList<SpecificEntity> getSpecific(String cid) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		ArrayList<SpecificEntity> list = null;
 
@@ -35,7 +36,7 @@ public class SpecificDAO {
 	}
 
 	// sname으로 해당 s_id 반환
-	public static String getSid(String sname) throws NotExistException {
+	public static String getSid(String sname) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();
 		String sid = null;
 
