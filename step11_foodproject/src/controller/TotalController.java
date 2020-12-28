@@ -41,8 +41,6 @@ public class TotalController extends HttpServlet {
 				getSpecifics(request, response);
 			}else if(command.equals("getRestaurants")){
 				getRestaurants(request, response);
-			}else if(command.equals("getSingleRestaurant")) {
-				getSingleRestaurant(request, response);
 			}
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
@@ -120,7 +118,7 @@ public class TotalController extends HttpServlet {
 					request.getSession().setAttribute("restaurant", restaurant);
 					request.getSession().setAttribute("successMsg", "레스토랑 추가완료");
 					
-					url = "restaurantDetail.jsp";
+					url = "restauranDetail.jsp";
 				}else{
 					request.getSession().setAttribute("errorMsg", "레스토랑 생성시 오류");
 				}
@@ -163,7 +161,7 @@ public class TotalController extends HttpServlet {
 			String cid = FoodService.getCid(request.getParameter("cname"));
 			request.getSession().setAttribute("successMsg", "검색 성공");
 			request.getSession().setAttribute("specifics", FoodService.getSpecific(cid));
-			url = "specificDetail.jsp";
+			url = "specificList.jsp";
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
 			s.printStackTrace();
@@ -185,21 +183,5 @@ public class TotalController extends HttpServlet {
 			s.printStackTrace();
 		}
 		request.getRequestDispatcher(url).forward(request, response);
-	}
-	
-	//rid 이용해서  해당 res 정보 가져오기
-	public void getSingleRestaurant(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
-		String url = "showError.jsp";
-		
-		try {
-			request.getSession().setAttribute("successMsg", "검색 성공");
-			request.getSession().setAttribute("restaurant", FoodService.getSingleRestaurant(request.getParameter("rid")));
-			url = "restaurantDetail.jsp";
-		}catch(Exception s){
-			request.getSession().setAttribute("errorMsg", s.getMessage());
-			s.printStackTrace();
-		}
-		request.getRequestDispatcher(url).forward(request, response);
-	}
-	
+	}	
 }
