@@ -40,8 +40,8 @@ public class SpecificDAO {
 		String sid = null;
 
 		try {
-			sid = (String) em.createNativeQuery("select s_id from specific where s_name=?", SpecificEntity.class)
-					.setParameter(1, sname).getSingleResult();
+			sid = String.valueOf(em.createNativeQuery("select s_id from specific where s_name=?")
+					.setParameter(1, sname).getSingleResult());
 			if (sid == null) {
 				log.info("select specific id 실패");
 				throw new NotExistException("select specific id 실패");

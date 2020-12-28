@@ -1,6 +1,6 @@
 package model.dao;
 
-import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
 
@@ -17,9 +17,9 @@ public class CategoryDAO {
 		String cid = null;
 
 		try {
-			cid = (String) em.createNativeQuery("select c_id from specific where c_name=?", CategoryEntity.class)
-					.setParameter(1, cname).getSingleResult();
-			if (cid == null) {
+			 cid = String.valueOf(em.createNativeQuery("select c_id from category where c_name=?")
+					.setParameter(1, cname).getSingleResult());
+				if (cid == null) {
 				log.info("select category id 실패");
 				throw new NotExistException("select category id 실패");
 			}

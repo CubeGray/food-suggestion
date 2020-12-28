@@ -17,33 +17,37 @@
 <tr>
 <c:forEach items="${sessionScope.specifics}" var="data">
 	<c:choose>
-		<c:when test="${${data.cid.cid}=c_1}">
+		<c:when test="${data.cid.cid eq 'c_1'}">
+		<td>
+		<h3>${data.sname}</h3>
+		<a href="total?command=getRestaurants&sname=${data.sname}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="300" height="200"></a>
+		</td>
+		</c:when>
+		<%-- 
+		<<c:when test="${data.cid.cid eq 'c_2'}">
 		<td>
 		<h3>${data.sname}</h3>
 		<a href="total?command=getRestaurants&sname=${data.sname}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="300" height="200"></a>
 		</td>
 		</c:when>
 		
-		<c:when test="${${data.cid.cid}=c_2}">
+		<c:when test="${data.cid.cid eq 'c_3'}">
 		<td>
 		<h3>${data.sname}</h3>
 		<a href="total?command=getRestaurants&sname=${data.sname}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="300" height="200"></a>
 		</td>
 		</c:when>
 		
-		<c:when test="${${data.cid.cid}=c_3}">
+		<c:when test="${data.cid.cid eq 'c_4'}">
 		<td>
 		<h3>${data.sname}</h3>
 		<a href="total?command=getRestaurants&sname=${data.sname}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="300" height="200"></a>
 		</td>
 		</c:when>
-		
-		<c:otherwise test="${${data.cid.cid}=c_4}">
-		<td>
-		<h3>${data.sname}</h3>
-		<a href="total?command=getRestaurants&sname=${data.sname}"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" width="300" height="200"></a>
-		</td>
-		</c:otherwise>	
+		 --%>
+		<c:otherwise>
+		aldskfj
+		</c:otherwise>
 	</c:choose>
 	</c:forEach>
 </tr>

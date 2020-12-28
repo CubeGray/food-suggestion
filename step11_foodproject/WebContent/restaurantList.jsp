@@ -40,7 +40,6 @@
 
 
 <br><br><br>
-<font color="blue">Map과 Page 버튼을 클릭하시면 각 음식점의 지도와 상세정보를 보실 수 있습니다. </font>
 </center>
 </body>
 </html>
