@@ -22,7 +22,7 @@
 	</tr>
 
 	<%-- <c:forEach begin="10" end="20" step="2" var="data" varStatus="status"> --%>
-	<%-- <c:forEach var="data" items="${sessionScope.restaurants}" varStatus = "status"> --%>
+	<c:forEach var="data" items="${sessionScope.restaurants}" varStatus = "status"> 
 		<tr>
 		<td>${status.count}</td>
 		<td>${data.rname}</td>
@@ -30,7 +30,7 @@
 		<td><a href="${data.pagelink}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상세정보</a></td>
 		
 		</tr>
-<%-- 	</c:forEach> --%>
+	</c:forEach>
 	
 </table>
 <br><br><br>
