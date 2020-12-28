@@ -97,6 +97,28 @@ public class RestaurantDAO {
 		}
 		return flag;
 	}
+	// rid로 해당 레스토랑 모든 정보 반환
+		public static RestaurantEntity getSingleRestaurant(String rid) throws Exception {
+			EntityManager em = PublicCommon.getEntityManger();
+			RestaurantEntity r = null;
+			
+			try {
+				r = (RestaurantEntity) em.createNativeQuery("select * from restaurant where r_id=?", RestaurantEntity.class)
+						.setParameter(1, rid).getSingleResult();
+				if (r == null) {
+					log.info("select restaurant 실패");
+					throw new NotExistException("select restaurant 실패");	
+				}
+			} catch (Exception e) {
+				log.warn("getRestaurant : 오류발생");
+				e.printStackTrace();
+				throw e;
+			} finally {
+				em.close();
+			}
+			return r;
+		}
+	
 	// sid로 해당 레스토랑 모든 정보 반환
 	public static ArrayList<RestaurantEntity> getRestaurant(String sid) throws Exception {
 		EntityManager em = PublicCommon.getEntityManger();

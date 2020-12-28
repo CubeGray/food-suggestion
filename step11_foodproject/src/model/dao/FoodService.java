@@ -23,7 +23,11 @@ public class FoodService {
 	public static String getSid(String sname) throws Exception {
 		return SpecificDAO.getSid(sname);
 	}
-
+	
+	// 세부카테고리 이름으로 SpecificEntity 반환
+	public static SpecificEntity getSpecificEntity(String sname) throws Exception {
+		return SpecificDAO.getSpecificEntity(sname);
+	}	
 	
 	// Restaurant
 	// 추가
@@ -41,7 +45,12 @@ public class FoodService {
 		return RestaurantDAO.deleteRestaurant(rid);
 	}
 
-	// id로 특정 음식점 정보 반환
+	// rid로 특정 음식점 정보 반환
+	public static RestaurantEntity getSingleRestaurant(String rid) throws Exception{
+		return RestaurantDAO.getSingleRestaurant(rid);
+	}
+	
+	// sid로 특정 음식점들 정보 반환
 	public static ArrayList<RestaurantEntity> getRestaurant(String sid) throws Exception {
 		return RestaurantDAO.getRestaurant(sid);
 	}

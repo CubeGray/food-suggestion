@@ -1,6 +1,5 @@
 package model.dao;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
@@ -56,5 +55,25 @@ public class SpecificDAO {
 		}
 		return sid;
 	}
+	// sname로 해당 specificentity 반환
+	public static SpecificEntity getSpecificEntity(String sname) throws Exception {
+		EntityManager em = PublicCommon.getEntityManger();
+		SpecificEntity s = null;
 
+		try {
+			s = (SpecificEntity) em.createNativeQuery("select * from specific where s_name=?", SpecificEntity.class)
+					.setParameter(1, sname).getSingleResult();
+			if (s == null) {
+				log.info("select specific 실패");
+				throw new NotExistException("select specific 실패");
+			}
+		} catch (Exception e) {
+			log.warn("getSpecificEntity : 오류발생");
+			e.printStackTrace();
+			throw e;
+		} finally {
+			em.close();
+		}
+		return s;
+	}
 }
