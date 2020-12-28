@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.dao.FoodService;
 import model.entity.RestaurantEntity;
 import model.entity.SpecificEntity;
-import probono.model.ProbonoService;
+
 
 @WebServlet("/total")
 public class TotalController extends HttpServlet {
@@ -27,20 +27,22 @@ public class TotalController extends HttpServlet {
 		}
 
 		try{
-			if(command.equals("getCid")){//모든 probono project 정보 검색
-				probonoProjectAll(request, response);
-			}else if(command.equals("activistAll")){//모든 재능 기부자 검색
-				activistAll(request, response);
-			}else if(command.equals("activist")){//특정 재능 기부자 정보 검색
-				activist(request, response);
-			}else if(command.equals("activistInsert")){//재능 기부자 추가 등록
-				activistInsert(request, response);
-			}else if(command.equals("activistUpdateReq")){//재능 기부자 정보 수정요청
-				activistUpdateReq(request, response);
-			}else if(command.equals("activistUpdate")){//재능 기부자 정보 수정
-				activistUpdate(request, response);
-			}else if(command.equals("activistDelete")){//재능 기부자 탈퇴[삭제]
-				activistDelete(request, response);
+			if(command.equals("restaurantgetAll")){
+				restaurantgetAll(request, response);
+			}else if(command.equals("restaurantUpdate")){
+				restaurantUpdate(request, response);
+			}else if(command.equals("restaurantUpdateReq")){
+				restaurantUpdateReq(request, response);
+			}else if(command.equals("restaurantInsert")){
+				restaurantInsert(request, response);
+			}else if(command.equals("restaurantDelete")){
+				restaurantDelete(request, response);
+			}else if(command.equals("getSpecifics")){
+				getSpecifics(request, response);
+			}else if(command.equals("getRestaurants")){
+				getRestaurants(request, response);
+			}else if(command.equals("getSingleRestaurant")) {
+				getSingleRestaurant(request, response);
 			}
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
