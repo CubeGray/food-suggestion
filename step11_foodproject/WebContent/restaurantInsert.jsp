@@ -14,7 +14,7 @@
 <h3>식당 정보</h3>
 <hr><p>
 
-<form action="total?command=res" method="post">                                 
+<form action="total?command=restaurantInsert" method="post">                                 
 	<input type="hidden" name="command" value="restaurantInsert">
 	<table border="1">
 		<tr>
@@ -24,7 +24,7 @@
 	 		<td>rname</td><td><input type="text" name="rname"></td>
 		</tr>
 		<tr>	
-			<td>s_name</td><td><input type="text" name="s_name"></td>
+			<td>sname</td><td><input type="text" name="sname"></td>
 	 	</tr>
 	 	<tr>
 	 		<td>maplink</td><td><input type="text" name="maplink"></td>

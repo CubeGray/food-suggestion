@@ -118,7 +118,7 @@ public class TotalController extends HttpServlet {
 					request.getSession().setAttribute("restaurant", restaurant);
 					request.getSession().setAttribute("successMsg", "레스토랑 추가완료");
 					
-					url = "restauranDetail.jsp";
+					url = "restaurantDetail.jsp";
 				}else{
 					request.getSession().setAttribute("errorMsg", "레스토랑 생성시 오류");
 				}

@@ -14,17 +14,17 @@
 <h3>식당 정보 수정하기 - 식당 위치 수정</h3>
 <hr><p>
 
-<form action="total?command= restaurantUpdate" method="post">
+<form action="total?command=restaurantUpdate" method="post">
 <table border="1">
 	<thead>
 		<tr>
 			<th>rid</th><th>rname</th><th>maplink</th><th>pagelink</th>
 		</tr>
  	<tr>
- 		<td><input type="text" name="activistId"  value="${sessionScope.re.rid}" readonly></td>
- 		<td>${re.rname}</td>
- 		<td><input type="text" name="maplink" value="${re.maplink}"></td>
- 		<td>${re.pagelink}</td>
+ 		<td><input type="text" name="rid"  value="${sessionScope.re.rid}" readonly></td>
+ 		<td>${sessionScope.re.rname}</td>
+ 		<td><input type="text" name="maplink" value="${sessionScope.re.maplink}"></td>
+ 		<td>${sessionScope.re.pagelink}</td>
  	</tr>
  	
  	<tr>
