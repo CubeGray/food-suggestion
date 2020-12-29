@@ -1,17 +1,17 @@
-:fork_and_knife: Restaurant Recommander System 
-==============================================
+:fork_and_knife: Restaurant Recommandtion System 
+================================================
 
 
 ## description
-매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램
+매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램()()
 
 
 ## ER Diagram
-![food_erg](./image/food_erd.PNG)
+![food_erg](./image/food_erd.PNG)()()
 
 
 ## 페이지 프로세스 (oven url)
-https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
+https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/()()
 
 
 ## Issue
