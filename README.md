@@ -1,12 +1,18 @@
-# food suggestion
+:fork_and_knife: Restaurant Recommander System 
+==============================================
+
+
 ## description
 매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램
 
-## ERDiagram
+
+## ER Diagram
 ![food_erg](./image/food_erd.PNG)
 
-## oven url 페이지 프로세스
+
+## 페이지 프로세스 (oven url)
 https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
+
 
 ## Issue
 > 1. 엔티티의 모든 속성이 아닌 특정 속성만 select하는 상황
@@ -14,7 +20,6 @@ https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
 - select id 인 경우 String이 결과로 반환되기 때문에 entity class로 매핑이 안됨.
 - 따라서 Query createNativeQuery(String sqlString, Class resultClass)메소드 대신 Query createNativeQuery(String sqlString)메소드 사용하여 해결
 
-- 
 <details>
 <summary>문제 발생 부분</summary>
 <div markdown="1">
@@ -28,8 +33,11 @@ public class CategoryDAO {
 		String cid = null;
 
 		try {
-			 cid = String.valueOf(em.createNativeQuery("select c_id from category where c_name=?",CategoryEntity.class)
+			 cid = String.valueOf(em.createNativeQuery("select c_id from category where c_name=?")
 					.setParameter(1, cname).getSingleResult());
+                    /* 문제 발생 코드
+                    String.valueOf(em.createNativeQuery("select c_id from category where c_name=?",CategoryEntity.class)
+					.setParameter(1, cname).getSingleResult());*/
 				if (cid == null) {
 				log.info("select category id 실패");
 				throw new NotExistException("select category id 실패");
