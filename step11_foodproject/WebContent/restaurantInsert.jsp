@@ -18,19 +18,19 @@
 	<input type="hidden" name="command" value="restaurantInsert">
 	<table border="1">
 		<tr>
-			<td>rid</td><td><input type="text" name="rid"></td>
+			<td>R_ID</td><td><input type="text" name="rid"></td>
 		</tr>
 		<tr>
-	 		<td>rname</td><td><input type="text" name="rname"></td>
+	 		<td>식당 이름</td><td><input type="text" name="rname"></td>
 		</tr>
 		<tr>	
-			<td>sname</td><td><input type="text" name="sname"></td>
+			<td>세부카테고리 이름</td><td><input type="text" name="sname"></td>
 	 	</tr>
 	 	<tr>
-	 		<td>maplink</td><td><input type="text" name="maplink"></td>
+	 		<td>지도 link</td><td><input type="text" name="maplink"></td>
 	 	</tr>
 	 	<tr>
-	 		<td>pagelink</td><td><input type="text" name="pagelink"></td>
+	 		<td>상세정보 link</td><td><input type="text" name="pagelink"></td>
 	 	</tr>
 	 	<tr>
 
