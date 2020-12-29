@@ -27,8 +27,7 @@
 		<td>${status.count}</td>
 		<td>${data.rname}</td>
 		<td><a href="${data.maplink}">지도보기</a></td>
-		<td><a href="${data.pagelink}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상세정보</a></td>
-		
+		<td><a href="${data.pagelink}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상세정보</a></td>		
 		</tr>
 	</c:forEach>
 	

@@ -54,11 +54,10 @@ public class TotalController extends HttpServlet {
 		String url = "showError.jsp";
 		try {
 			request.getSession().setAttribute("restaurantAll", FoodService.getAllRestaurant());
-			request.setAttribute("successMsg", "레스토랑 검색 성공");
+			request.getSession().setAttribute("successMsg", "레스토랑 검색 성공");
 			url = "restaurantList.jsp";
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
-			s.printStackTrace();
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
@@ -71,7 +70,7 @@ public class TotalController extends HttpServlet {
 		try {
 			FoodService.updateRestaurant(request.getParameter("rid"), request.getParameter("maplink"));
 			request.getSession().setAttribute("restaurant",FoodService.getSingleRestaurant(request.getParameter("rid")));
-			request.setAttribute("successMsg", "수정 완료");	
+			request.getSession().setAttribute("successMsg", "수정 완료");	
 			url = "restaurantDetail.jsp";
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
@@ -123,7 +122,7 @@ public class TotalController extends HttpServlet {
 					request.getSession().setAttribute("errorMsg", "레스토랑 생성시 오류");
 				}
 			}else {
-				request.setAttribute("errorMsg", "모든 요소 값들을 입력해주세요!");
+				request.getSession().setAttribute("errorMsg", "모든 요소 값들을 입력해주세요!");
 			}
 		}catch(Exception s){
 			request.getSession().setAttribute("errorMsg", s.getMessage());
