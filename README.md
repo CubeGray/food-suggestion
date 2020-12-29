@@ -1,6 +1,7 @@
 :fork_and_knife: Restaurant Recommandtion System 
 ================================================
 
+#
 
 ## :pencil:Description
 매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램
@@ -91,6 +92,8 @@ public class CategoryDAO {
 </div>
 </details>
 
+#
+
 > 2. Entity에 FK변수 추가시 주의점
 - table에서는 varchar2타입의 FK가 Entity에서는 참조하는 객체 타입으로 변수선언됨
 - 따라서 String값으로 입력된 파라메터를 객체 타입으로 반환하는 메소드를 구현
@@ -179,6 +182,8 @@ public class SpecificEntity {
 
 </div>
 </details>
+
+#
 
 > 3. JSTL에서 엔티티의 FK(객체참조변수)의 string값에 접근
 - table에서는 varchar2타입의 FK가 Entity에서는 참조하는 객체 타입으로 변수선언됨
