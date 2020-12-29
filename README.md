@@ -9,7 +9,10 @@
 https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
 
 ## issue
-
+> 1. 
+- select * 인 경우 entity.class로 매핑됨
+- select id 인 경우 String이 결과로 반환되기 때문에 entity class로 매핑이 안됨.
+- 따라서 Query createNativeQuery(String sqlString, Class resultClass)메소드 대신 Query createNativeQuery(String sqlString)메소드 사용하여 해결
 <details>
 <summary>문제 발생 부분</summary>
 <div markdown="1">
@@ -39,7 +42,15 @@ public class CategoryDAO {
 		return cid;
 	}
 }
+```
+</div>
+</details>
 
+<details>
+<summary>Query createNativeQuery 메소드</summary>
+<div markdown="1">
+
+```java
     /**
      * Create an instance of <code>Query</code> for executing
      * a native SQL query.
@@ -48,6 +59,21 @@ public class CategoryDAO {
      * @return the new query instance
      */
     public Query createNativeQuery(String sqlString, Class resultClass);
+
+    /**
+     * Create an instance of <code>Query</code> for executing
+     * a native SQL statement, e.g., for update or delete.
+     * If the query is not an update or delete query, query
+     * execution will result in each row of the SQL result
+     * being returned as a result of type Object[] (or a result
+     * of type Object if there is only one column in the select
+     * list.)  Column values are returned in the order of their
+     * appearance in the select list and default JDBC type
+     * mappings are applied.
+     * @param sqlString a native SQL query string
+     * @return the new query instance
+     */
+    public Query createNativeQuery(String sqlString);
 ```
 </div>
 </details>
