@@ -27,7 +27,7 @@
 		<td>${status.count}</td>
 		<td>${data.rname}</td>
 		<td><button onclick = "location.href='total?command=restaurantUpdateReq&rid=${data.rid}'">수정하기</button></td>
-		<td><button onclick = "location.href='total?command=restaurantDelete&rid=${data.rid}'">탈퇴하기</button></td>
+		<td><button onclick = "location.href='total?command=restaurantDelete&rid=${data.rid}'">삭제하기</button></td>
 		
 		</tr>
 	</c:forEach>
