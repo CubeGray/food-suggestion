@@ -1,5 +1,5 @@
-:fork_and_knife: Restaurant Recommandtion System 
-================================================
+:fork_and_knife: Restaurant Recommendation System 
+=================================================
 
 #
 
@@ -20,7 +20,7 @@ https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
 
 ## :question::exclamation:Issue
 > 1. 엔티티의 모든 속성이 아닌 특정 속성만 select하는 상황
-- select * 인 경우 entity.class로 매핑됨
+- 모든검색인 경우 entity.class로 매핑됨
 - select id 인 경우 String이 결과로 반환되기 때문에 entity class로 매핑이 안됨.
 - 따라서 Query createNativeQuery(String sqlString, Class resultClass)메소드 대신 Query createNativeQuery(String sqlString)메소드 사용하여 해결
 
