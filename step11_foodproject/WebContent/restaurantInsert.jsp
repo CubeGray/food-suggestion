@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,7 +11,7 @@
 <body>
 <br><br><br>
 
-<h3>½Ä´ç Á¤º¸</h3>
+<h3>ì‹ë‹¹ ì •ë³´</h3>
 <hr><p>
 
 <form action="total?command=restaurantInsert" method="post">                                 
@@ -21,25 +21,25 @@
 			<td>R_ID</td><td><input type="text" name="rid"></td>
 		</tr>
 		<tr>
-	 		<td>½Ä´ç ÀÌ¸§</td><td><input type="text" name="rname"></td>
+	 		<td>ì‹ë‹¹ ì´ë¦„</td><td><input type="text" name="rname"></td>
 		</tr>
 		<tr>	
-			<td>¼¼ºÎÄ«Å×°í¸® ÀÌ¸§</td><td><input type="text" name="sname"></td>
+			<td>ì„¸ë¶€ì¹´í…Œê³ ë¦¬ ì´ë¦„</td><td><input type="text" name="sname"></td>
 	 	</tr>
 	 	<tr>
-	 		<td>Áöµµ link</td><td><input type="text" name="maplink"></td>
+	 		<td>ì§€ë„ link</td><td><input type="text" name="maplink"></td>
 	 	</tr>
 	 	<tr>
-	 		<td>»ó¼¼Á¤º¸ link</td><td><input type="text" name="pagelink"></td>
+	 		<td>ìƒì„¸ì •ë³´ link</td><td><input type="text" name="pagelink"></td>
 	 	</tr>
 	 	<tr>
 
-	 		<td colspan="5"><input type="submit" value="ÀúÀå">&nbsp;&nbsp;&nbsp;<input type="reset" value="Ãë¼Ò"></td>
+	 		<td colspan="5"><input type="submit" value="ì €ìž¥">&nbsp;&nbsp;&nbsp;<input type="reset" value="ì·¨ì†Œ"></td>
 	 	</tr>
 	</table>
 </form>
 <br><br><br>
-<a href="total?command=restaurantgetAll">¸ðµç À½½ÄÁ¡ º¸±â</a>
+<a href="total?command=restaurantgetAll">ëª¨ë“  ìŒì‹ì  ë³´ê¸°</a>
 
 </center>
 </body>
