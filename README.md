@@ -5,13 +5,17 @@
 ## :pencil:Description
 매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램
 
+#
+
 ## :bar_chart:ER Diagram
 ![food_erg](./image/food_erd.PNG)
 
+#
 
 ## :mag:페이지 프로세스 (oven url)
 https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
 
+#
 
 ## :question::exclamation:Issue
 > 1. 엔티티의 모든 속성이 아닌 특정 속성만 select하는 상황
@@ -175,7 +179,6 @@ public class SpecificEntity {
 
 </div>
 </details>
-
 
 > 3. JSTL에서 엔티티의 FK(객체참조변수)의 string값에 접근
 - table에서는 varchar2타입의 FK가 Entity에서는 참조하는 객체 타입으로 변수선언됨
