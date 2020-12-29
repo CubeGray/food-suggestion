@@ -9,7 +9,7 @@
 #
 
 ## :bar_chart:ER Diagram
-![food_erg](./image/food_erd.PNG)
+![food_erg](./image/ERD.PNG)
 
 #
 
