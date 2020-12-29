@@ -2,18 +2,18 @@
 ================================================
 
 
-## Description
+## :pencil:Description
 매번 점심 메뉴를 정하느라 낭비하는 시간을 절약하기 위해 play data학원을 중심으로 한식, 중식, 양식, 일식 카테고리 별로 맛집을 추천해주는 프로그램
 
-## ER Diagram
+## :bar_chart:ER Diagram
 ![food_erg](./image/food_erd.PNG)
 
 
-## 페이지 프로세스 (oven url)
+## :mag:페이지 프로세스 (oven url)
 https://ovenapp.io/view/1AGe1dM0HzIfbU4de1wGfCy8VWyBBqGu/
 
 
-## Issue
+## :question::exclamation:Issue
 > 1. 엔티티의 모든 속성이 아닌 특정 속성만 select하는 상황
 - select * 인 경우 entity.class로 매핑됨
 - select id 인 경우 String이 결과로 반환되기 때문에 entity class로 매핑이 안됨.
