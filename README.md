@@ -1,4 +1,4 @@
-:fork_and_knife: foodrecommendation_ver1
+:fork_and_knife: foodrecommandation_ver1
 =================================================
 
 #
