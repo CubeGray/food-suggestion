@@ -1,4 +1,4 @@
-:fork_and_knife: Restaurant Recommendation System 
+:fork_and_knife: foodrecommendation_ver1
 =================================================
 
 #
